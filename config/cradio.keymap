@@ -10,7 +10,7 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 // meh key
-#define MEH(k) &ht LSHFT(LALT(LCTRL(LGUI))) k
+#define MEH(k1) &ht LS(LA(LC(LGUI))) k1
 
 // layers
 #define default 0
@@ -34,7 +34,7 @@
 
         lt {
             quick-tap-ms = <150>;
-        }
+        };
     };
 
     conditional_layers {
@@ -59,7 +59,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt symbol TAB &ht LSHIFT ENTER   &ht MEH SPACE  &lt number BSPC
+                                        &lt symbol TAB &ht LSHIFT ENTER   MEH(SPACE)  &lt number BSPC
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
