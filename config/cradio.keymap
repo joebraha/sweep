@@ -20,6 +20,10 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        lt {
+            quick-tap-ms = <150>;
+        }
     };
 
     conditional_layers {
