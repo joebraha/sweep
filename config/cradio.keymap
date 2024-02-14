@@ -9,6 +9,14 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+// layers
+#define default 0
+#define number 1
+#define symbol 2
+#define qwerty 4
+#define conf 5
+
+
 / {
     behaviors {
         ht: hold_tap {
@@ -29,8 +37,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <4>;
+            if-layers = <number symbol>;
+            then-layer = <conf>;
         };
     };
     
@@ -48,7 +56,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB &ht LSHIFT ENTER    &kp SPACE  &lt 1 BSPC
+                                        &lt symbol TAB &ht LSHIFT ENTER   &kp SPACE  &lt number BSPC
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
@@ -99,7 +107,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                        &lt symbol TAB &ht LSHIFT ENTER   &kp SPACE  &lt number BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -108,7 +116,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │ QWERTY   │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &tog 3     &trans     &trans     &trans    &sys_reset
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0   &tog qwerty &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
           &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
