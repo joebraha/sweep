@@ -16,8 +16,8 @@
 #define default 0
 #define number 1
 #define symbol 2
-#define qwerty 4
-#define conf 5
+#define qwerty 3
+#define conf 4
 
 
 / {
