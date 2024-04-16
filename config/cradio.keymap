@@ -32,7 +32,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lt {
+        &lt {
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
             quick-tap-ms = <200>;
