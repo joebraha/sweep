@@ -149,13 +149,13 @@
         //│  Q       │  W       │  F       │  P       │  B       │       │  J       │  L       │  U       │  Y       │ BACKSPACE│
             &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │       │  M       │  N       │  E       │  I       │ O        │
-            HRML(A,        R,        S,         T)     &kp G              &kp M      HRMR(N,        E,         I,        O)
+        //│  A       │  R       │  S (ALT) │  T (CMD) │  G       │       │  M       │  N (CMD) │  E (ALT) │  I       │ O        │
+            kp A       &kp R     &ht LALT S &ht LGUI T   &kp G              &kp M    &ht LGUI N  &ht LALT E  &kp I       &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , < h-   │ . >  h_  │ / ? h!   │
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K     &kp H  &ht MINUS COMMA &ht UNDER DOT &ht EXCL FSLH 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             MEH(SPACE) &kp LSHIFT         &ht LCTRL ESC  &to vallack_2
+                                            MEH(SPACE) &kp LSHIFT       &ht LCTRL ESC  &to vallack_2
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
@@ -167,30 +167,30 @@
         //│  ESC     │  @       │# hLasso  │  $       │  %       │       │  ^       │  (       │  )       │  ;       │ BACKSPACE│
 		        &kp ESC      &kp AT &ht LG(DLLR) HASH &kp DLLR &kp PRCNT         &kp CARET  &kp LPAR   &kp RPAR &kp SEMI   &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  =       │    &     │    *     │  '       │       │  \       │  LEFT    │  DOWN    │  UP      │  RIGHT   │
-		        &kp TAB    &kp EQUAL  &kp AMPS   &kp ASTRK   &kp SQT            &kp BSLH &kp LARW  &kp DARW      &kp UARW  &kp RARW
+        //│  TAB     │  =       │   ALT    │  CMD     │  '       │       │  \       │  LEFT    │  DOWN    │  UP      │  RIGHT   │
+		        &kp TAB    &kp EQUAL  &kp LALT   &kp LGUI   &kp SQT            &kp BSLH &kp LARW  &kp DARW      &kp UARW  &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ~       │  `       │          │          │  "       │       │          │   [      │  ]       │          │ CONTROLS │
-  		      &kp TILDE  &kp GRAVE  &trans      &trans  &kp LS(SQT)         &trans       &kp LBKT &kp RBKT    &trans      &mo vallack_conf
+        //│  ~       │  `       │    *     │    &     │  "       │       │          │   [      │  ]       │          │ CONTROLS │
+  		      &kp TILDE  &kp GRAVE  &kp ASTRK   &kp AMPS  &kp LS(SQT)         &trans       &kp LBKT &kp RBKT    &trans      &mo vallack_conf
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                  &to vallack_1 &kp LSHIFT        &kp LALT &to vallack_3 
+					                                  &to vallack_1 &kp LSHIFT        &kp LCTRL &to vallack_3 
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
 		        >;
 		    };
 
 		    vallack_3 {
-		      bindings = <
+		         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESC     │  PLAY    │  REWIND  │  NEXT    │          │       │          │  7       │    8     │    9     │ BACKSPACE│
-	        &kp ESC     &kp C_PP    &kp C_PREV  &kp C_NEXT  &trans            &trans    &kp N7     &kp N8     &kp N9     &kp BSPC
+	           &kp ESC   &kp C_PP    &kp C_PREV  &kp C_NEXT  &trans            &trans    &kp N7     &kp N8     &kp N9     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │          │  VOL_DN  │  VOL_UP  │  trans   │       │          │  4       │  5       │  6       │ ENTER    │
-		      &kp TAB  &trans       &kp C_VOL_DN &kp C_VOL_UP  &trans           &trans   &kp N4     &kp N5     &kp N6     &kp ENTER
+        //│  TAB     │          │  ALT     │  CMD     │  trans   │       │          │  4       │  5       │  6       │ ENTER    │
+		         &kp TAB  &trans      &kp LALT   &kp LGUI   &trans               &trans   &kp N4     &kp N5     &kp N6     &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  %       │  /       │  *       │  .       │       │    0     │    1     │   2      │   3      │ CONTROLS │
-	        &trans       &kp PRCNT &kp SLASH   &kp STAR   &kp DOT             &kp N0    &kp N1      &kp N2    &kp N3      &mo vallack_conf
+	           &trans    &kp PRCNT &kp SLASH   &kp STAR   &kp DOT             &kp N0    &kp N1      &kp N2    &kp N3      &mo vallack_conf
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                 &to vallack_1 &kp LGUI          &kp LALT   &to vallack_2
+					                                 &to vallack_1 &kp LSHIFT          &kp LCTRL   &to vallack_2
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
 		        >;
 		    };
