@@ -173,7 +173,7 @@
         //│  ~       │  `       │    *     │    &     │  "       │       │          │   [      │  ]       │          │ CONTROLS │
   		      &kp TILDE  &kp GRAVE  &kp ASTRK   &kp AMPS  &kp LS(SQT)         &trans       &kp LBKT &kp RBKT    &trans      &mo vallack_conf
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                  &to vallack_1 &kp LSHIFT        &kp LCTRL &to vallack_3 
+					                                  &to vallack_1 &kp LSHIFT    &ht LCTRL ESC &to vallack_3 
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
 		        >;
 		    };
@@ -190,7 +190,7 @@
         //│          │  %       │  /       │  *       │  .       │       │    0     │    1     │   2      │   3      │ CONTROLS │
 	           &trans    &kp PRCNT &kp SLASH   &kp STAR   &kp DOT             &kp N0    &kp N1      &kp N2    &kp N3      &mo vallack_conf
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                 &to vallack_1 &kp LSHIFT          &kp LCTRL   &to vallack_2
+					                                 &to vallack_1 &kp LSHIFT      &ht LCTRL ESC &to vallack_2
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
 		        >;
 		    };
