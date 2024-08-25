@@ -150,7 +150,7 @@
             &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S (ALT) │  T (CMD) │  G       │       │  M       │  N (CMD) │  E (ALT) │  I       │ O        │
-            kp A       &kp R     &ht LALT S &ht LGUI T   &kp G              &kp M    &ht LGUI N  &ht LALT E  &kp I       &kp O
+            &kp A       &kp R     &ht LALT S &ht LGUI T   &kp G              &kp M    &ht LGUI N  &ht LALT E  &kp I       &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , < h-   │ . >  h_  │ / ? h!   │
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K     &kp H  &ht MINUS COMMA &ht UNDER DOT &ht EXCL FSLH 
