@@ -104,7 +104,7 @@
         //│          │          │          │ FN LAYER │          │   │  &       │  _       │  +       │  │       │          │
             &trans     &trans     &trans  &to function &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to default     &trans         &to conf_layer     &to number
+                                             &to default     &trans         &to conf     &to number
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
