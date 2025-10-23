@@ -69,7 +69,8 @@
         //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                         &lt symbol TAB &ht LSHIFT ENTER   MEH(SPACE)  &lt number BSPC
+                                          // LEADER KEY
+                                              &kp F13  &kp LSHFT           SPACE     &to number 
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
@@ -80,13 +81,13 @@
         //│ 0        │  1       │  2       │  3       │ INSERT   │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
             &kp N0     &kp N1     &kp N2     &kp N3     &kp INS        &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
+        //│ TAB      │  4       │  5       │  6       │ DELETE   │   │  ENTER   │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &kp TAB    &kp N4     &kp N5     &kp N6     &kp DEL         &kp ENTER     &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │          │   │          │  :       │  ;       │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp COLON  &kp SEMI   &trans     &trans
+        //│ CAPS     │  7       │  8       │  9       │          │   │          │  :       │  ;       │          │BACKSPACE │
+           &caps_word  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp COLON  &kp SEMI   &trans     &BSPC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &to default_layer     &kp ESC        &trans     &to symbol
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -101,9 +102,9 @@
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ FN LAYER │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans  &tog function &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &trans     &trans     &trans  &to function &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &to default_layer     &trans         &to conf_layer     &to number
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -223,7 +224,7 @@
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │ VALLACK  │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &tog vallack_1  &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &to default_layer     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
