@@ -70,7 +70,7 @@
             &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                           // LEADER KEY
-                                              &kp F13  &kp LSHFT           SPACE     &to number 
+                                              &kp F13  &kp LSHFT           &kp SPACE     &to number
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
