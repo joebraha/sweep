@@ -87,7 +87,7 @@
         //│ CAPS     │  7       │  8       │  9       │          │   │          │  :       │  ;       │          │BACKSPACE │
            &caps_word  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp COLON  &kp SEMI   &trans     &kp BSPC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to default_layer     &kp ESC        &trans     &to symbol
+                                             &to default     &kp ESC        &trans     &to symbol
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -104,7 +104,7 @@
         //│          │          │          │ FN LAYER │          │   │  &       │  _       │  +       │  │       │          │
             &trans     &trans     &trans  &to function &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to default_layer     &trans         &to conf_layer     &to number
+                                             &to default     &trans         &to conf_layer     &to number
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -224,7 +224,7 @@
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │ VALLACK  │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &tog vallack_1  &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to default_layer     &trans         &trans     &trans
+                                             &to default     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
