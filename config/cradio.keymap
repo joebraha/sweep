@@ -60,17 +60,17 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │       │  J       │  L       │  U       │  Y       │  ' "     │
-            &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp SQT
+        //│  Q       │  W       │  F       │  P       │  B       │       │  J       │  L       │  U       │  Y       │ BACKSPACE│
+            &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │       │  M       │  N       │  E       │  I       │ O        │
             HRML(A,        R,        S,         T)     &kp G              &kp M      HRMR(N,        E,         I,        O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+        //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , <      │ . >      │ ENTER    │
+            &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K      &kp H      &kp COMMA  &kp DOT    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                           // LEADER KEY
-                                              &kp F13  &kp LSHFT           &kp SPACE     &to number
+                                          &ht F13 LSHFT  &ht  LCTRL ESC   &kp SPACE     &to number
         //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
             >;    
         };
@@ -81,13 +81,13 @@
         //│ 0        │  1       │  2       │  3       │ INSERT   │   │          │ HOME     │ PAGE DN  │ PAGE UP  │ END      │
             &kp N0     &kp N1     &kp N2     &kp N3     &kp INS        &trans     &kp HOME   &kp PG_DN  &kp PG_UP  &kp END  
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │  4       │  5       │  6       │ DELETE   │   │  ENTER   │ LEFT     │ DOWN     │ UP       │ RIGHT    │
-            &kp TAB    &kp N4     &kp N5     &kp N6     &kp DEL         &kp ENTER     &kp LARW   &kp DARW   &kp UARW   &kp RARW
+        //│ TAB      │  4       │  5       │  6       │ DELETE   │   │          │ LEFT     │ DOWN     │ UP       │ RIGHT    │
+            &kp TAB    &kp N4     &kp N5     &kp N6     &kp DEL         &trans     &kp LARW   &kp DARW   &kp UARW   &kp RARW
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │          │   │          │  :       │  ;       │          │BACKSPACE │
-           &caps_word  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp COLON  &kp SEMI   &trans     &kp BSPC
+        //│ CAPS     │  7       │  8       │  9       │          │   │          │  :       │  ;       │  ' "     │  / ?     │
+           &caps_word  &kp N7     &kp N8     &kp N9     &trans         &trans     &kp COLON  &kp SEMI   &kp SQT     &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to default     &kp ESC        &trans     &to symbol
+                                             &to default     &trans        &trans     &to symbol
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -121,7 +121,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &trans     &kp F7     &kp F8    &kp F9      &kp F10         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &to default
+                                             &to default     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
