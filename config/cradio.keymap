@@ -20,11 +20,7 @@
 #define symbol 2
 #define function 3
 #define qwerty 4
-#define vallack_1 5
-#define vallack_2 6
-#define vallack_3 7
-#define conf 8
-#define vallack_conf 9
+#define conf 5
 
 
 &lt {
@@ -101,8 +97,8 @@
         //│  !       │  @       │#         │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ FN LAYER │  CONF    │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans  &to function &to conf         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │ FN LAYER │  CONF    │   │  &       │  _       │  +       │  │       │  ?       │
+            &trans     &trans     &trans  &to function &to conf         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &to default   &trans         &trans    &to number
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -143,75 +139,6 @@
             >;
         };
 
-
-        vallack_1 {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │       │  J       │  L       │  U       │  Y       │ BACKSPACE│
-            &kp Q      &kp W      &kp F      &kp P      &kp B              &kp J      &kp L      &kp U      &kp Y      &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S (ALT) │  T (CMD) │  G       │       │  M       │  N (CMD) │  E (ALT) │  I       │ O        │
-            &kp A       &kp R     &ht LALT S &ht LGUI T   &kp G              &kp M    &ht LGUI N  &ht LALT E  &kp I       &kp O
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │       │  K       │  H       │ , < h-   │ . >  h_  │ / ? h!   │
-            &kp Z      &kp X      &kp C      &kp D      &kp V              &kp K     &kp H  &ht MINUS COMMA &ht UNDER DOT &ht EXCL FSLH 
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            MEH(SPACE) &kp LSHIFT       &ht LCTRL ESC  &to vallack_2
-        //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
-            >;    
-        };
-
-
-       	vallack_2 {
-		        bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  @       │# hLasso  │  $       │  %       │       │  ^       │  (       │  )       │  ;       │ BACKSPACE│
-		        &kp ESC   &kp AT &ht LG(DLLR) HASH &kp DLLR &kp PRCNT          &kp CARET  &kp LPAR   &kp RPAR   &kp SEMI   &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  =       │   ALT    │  CMD     │  '       │       │  \       │  LEFT    │  DOWN    │  UP      │  RIGHT   │
-		        &kp TAB    &kp EQUAL  &kp LALT   &kp LGUI   &kp SQT            &kp BSLH &kp LARW  &kp DARW      &kp UARW  &kp RARW
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  ~       │  `       │    *     │    &     │  "       │       │          │   [      │  ]       │          │ CONTROLS │
-  		      &kp TILDE  &kp GRAVE  &kp ASTRK   &kp AMPS  &kp LS(SQT)         &trans       &kp LBKT &kp RBKT   &trans   &mo vallack_conf
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                  &to vallack_1 &kp LSHIFT    &ht LCTRL ESC &to vallack_3 
-        //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
-		        >;
-		    };
-
-		    vallack_3 {
-		         bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  PLAY    │  REWIND  │  NEXT    │          │       │          │  7       │    8     │    9     │ BACKSPACE│
-	           &kp ESC   &kp C_PP    &kp C_PREV  &kp C_NEXT  &trans            &trans    &kp N7     &kp N8     &kp N9     &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │          │  ALT     │  CMD     │  trans   │       │          │  4       │  5       │  6       │ ENTER    │
-		         &kp TAB  &trans      &kp LALT   &kp LGUI   &trans               &trans   &kp N4     &kp N5     &kp N6     &kp ENTER
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  %       │  /       │  *       │  .       │       │    0     │    1     │   2      │   3      │ CONTROLS │
-	           &trans    &kp PRCNT &kp SLASH   &kp STAR   &kp DOT             &kp N0    &kp N1      &kp N2    &kp N3      &mo vallack_conf
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-					                                 &to vallack_1 &kp LSHIFT      &ht LCTRL ESC &to vallack_2
-        //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
-		        >;
-		    };
-
-    		// vallack_4 {
-    		//       bindings = <
-    		//   //╭──────────┬──────────┬──────────┬──────────┬──────────╮       ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-    		//   //│  ESC     │  W       │  F       │  P       │  B       │       │  J       │  L       │  U       │  Y       │ BACKSPACE│
-    		//    &kp ESC    &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT    &trans &trans    &kp LC(LS(TAB))   &kp RC(TAB) &kp LG(LBKT) &trans
-    		//   //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    		//   //│  TAB     │  R       │  S       │  T       │  G       │       │  M       │  N       │  E       │  I       │ O        │
-    		//    &kp TAB &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans        &trans &kp DOWN  &hm RALT UP &hm RCTL RIGHT &kp LG(RBKT)
-    		//   //├──────────┼──────────┼──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┼──────────┼──────────┤
-    		//   //│          │  `       │          │          │  "       │       │          │          │          │          │ NAV_LAYER│
-    		//    &kp LSHIFT &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN &to 0       &kp RGUI &td HOME PG_DN  &td END PG_UP  &trans &kp RSHIFT  
-    		//   //╰──────────┴──────────┴──────────┼──────────┼──────────┤       ├──────────┼──────────┼──────────┴──────────┴──────────╯
-    		//                                         &to 0 &trans &trans &kp RGUI 
-    		//   //                                 ╰──────────┴──────────╯       ╰──────────┴──────────╯
-    		//
-
         conf_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -228,25 +155,6 @@
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
-          vallack_conf {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │TOG BT/USB│PROFILE 0 │   │ QWERTY   │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans  &out OUT_TOG &bt BT_SEL 0   &tog qwerty &trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │ DEFAULT  │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &to default  &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-
 
     };
 };
