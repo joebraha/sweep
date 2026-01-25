@@ -43,13 +43,13 @@
 
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <number symbol>;
-            then-layer = <conf>;
-        };
-    };
+    /* conditional_layers { */
+    /*     compatible = "zmk,conditional-layers"; */
+    /*     tri_layer { */
+    /*         if-layers = <number symbol>; */
+    /*         then-layer = <conf>; */
+    /*     }; */
+    /* }; */
     
     keymap {
         compatible = "zmk,keymap";
