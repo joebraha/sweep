@@ -97,8 +97,8 @@
         //│  !       │  @       │#         │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ FN LAYER │  CONF    │   │  &       │  _       │  +       │  │       │  ?       │
-            &trans     &trans     &trans  &to function &to conf         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
+        //│(testing) │          │          │ FN LAYER │  CONF    │   │  &       │  _       │  +       │  │       │  ?       │
+            &kp =     &trans     &trans  &to function &to conf         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &kp QMARK
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &to default   &trans         &trans    &to number
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -145,8 +145,8 @@
         //│ RESET    │          │          │TOG BT/USB│PROFILE 0 │   │ QWERTY   │          │          │          │  RESET   │
            &sys_reset  &trans     &trans  &out OUT_TOG &bt BT_SEL 0   &tog qwerty &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│          │          │(testing) │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
+          &bootloader  &trans     &trans     &kp !    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2   &trans  &trans     &trans     &trans     &trans
